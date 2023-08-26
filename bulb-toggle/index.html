@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="page">
+        <div class="head">
+            <p class="heading">Bulb-Toggle</p>
+        </div>
+        
+         <div class="main-container">
+            
+            <div class="images">
+                <img class="img" src="./img/off.png"  id="img-off">
+    
+            </div>
+            <div class="buttens">
+                <button class="red-btn" type="button" onclick="redbtn()">Red</button>
+                <button class="green-btn" type="button" onclick="greenbtn()">Green</button>
+                <button class="orange-btn" type="button" onclick="orangebtn()">Orange</button>
+                <button class="purple-btn" type="button" onclick="purplebtn()">Purple</button>
+                <button class="blue-btn" type="button" onclick="bluebtn()">Blue</button>
+            </div>
+            <button class="main-btn" type="button" onclick="toggle()">ON/OFF</button>
+         </div>
+
+    </div>
+<script>
+    
+   function redbtn()
+{
+    const BulbElement =document.getElementById('img-off');
+    BulbElement.src = './img/red.png'
+}
+
+function greenbtn()
+{
+    const Greenelement = document.getElementById('img-off');
+    Greenelement.src = './img/green.png';
+}
+function orangebtn()
+{
+    const orangeElement =document.getElementById('img-off');
+    orangeElement.src = './img/orange.png'  
+}
+function purplebtn()
+{
+    const purpleelement = document.getElementById('img-off');
+    purpleelement.src = './img/purple.png';   
+}
+function bluebtn()
+{ 
+    const blueelement = document.getElementById('img-off');
+    blueelement.src = './img/blue.png';
+}
+function toggle()
+{
+    const mainElement =document.getElementById('img-off');
+    mainElement.src = './img/off.png'
+
+}
+</script>
+</body>
+</html>
