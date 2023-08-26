@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>dice roller</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body>
-    <h1>bjgjgjg</h1>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+       
+    }
+    .back{
+        background-image: url(https://files.crazygames.com/ludo-king/5/lk_h5_bg.png);
+        background-size: 100% 100%;
+        height: 100%;
+        width: 100%;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+.btn-dice{
+    margin:100px ;
+    background-color: brown;
+    padding: 5px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid brown;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.img-dice:hover{
+    background-color: white;
+    color: brown;
+}
+    
+
+.img-dice{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 80px;
+    ;
+    
+}
+.element {
+  animation: rotate 2s infinite;
+  background-color:#f9cbcb;
+  padding: 
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-180deg)
+  }
+  100% {
+    transform: rotate(180deg)
+  }
+}
+
+</style>
+<body class="">
+    <div class="">
+
+    
+    
+   <h1 class="text-center m-5"><b> Play Ludo King</b> </h1>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10"><img class="img-fluid" src="https://d33wubrfki0l68.cloudfront.net/599d5f385d285a2aee5342787db3217572763ed3/1a1b2/images/blog/ludo.jpg"/></div>
+        <div class="col-sm-1"> </div>
+      </div>
+
+        <!-- grid -->
+
+        <div class="container text-center mt-5">
+            <div class="row">
+              <div class="col">
+                    <div class="text-center">
+                    <div class="element  d-inline-block ">
+                    <img class="img-dice" id="imgdice0" src="./img/one.jpg"/>
+                    </div> <span></span>
+                    <button class="btn-dice " style="background-color: #244499;" onclick ="buttonDice(0)">
+                        Dice Roller
+                    </button>
+                    </div>
+              </div>
+              <div class="col">
+                <button class="btn-dice " onclick ="buttonDice()">
+                 All   Dice Roller
+                </button>
+           </div>
+              <div class="col">
+                    <div class="text-center">
+                    <div class="element  d-inline-block ">
+                    <img class="img-dice" id="imgdice1" src="./img/two.jpg"/>
+                    </div> <span></span>
+                    <button class="btn-dice "  style="background-color: #ffde01;" onclick ="buttonDice(1)">
+                        Dice Roller
+                    </button>
+                    </div>
+              </div>
+              
+            </div>
+          </div>
+    </div>
+    <script>
+        
+        function buttonDice(num) {
+             min = 1;
+             max = 7;
+            const Num = Math.floor(Math.random() * (max - min)) + min ;
+           console.log(Num);
+           const imgDice = document.getElementById('imgdice0');
+           const imgDice1 = document.getElementById('imgdice1');
+            console.log(imgDice);
+            if (num==0){
+                if(Num == 1) {
+                   imgDice.src="./img/one.jpg"
+                }
+                else if(Num==2) {
+                   imgDice.src="./img/two.jpg"
+                }
+                else if(Num==3) {
+                   imgDice.src="./img/three.jpg"
+                }
+                else if(Num==4) {
+                   imgDice.src="./img/four.jpg"
+                }
+                else if(Num==5) {
+                   imgDice.src="./img/five.jpg"
+                }
+                else {
+                   imgDice.src="./img/six.jpg"
+                }
+            }
+            else if(num==1){
+                if(Num == 1) {
+                   imgDice1.src="./img/one.jpg"
+                }
+                else if(Num==2) {
+                   imgDice1.src="./img/two.jpg"
+                }
+                else if(Num==3) {
+                   imgDice1.src="./img/three.jpg"
+                }
+                else if(Num==4) {
+                   imgDice1.src="./img/four.jpg"
+                }
+                else if(Num==5) {
+                   imgDice1.src="./img/five.jpg"
+                }
+                else {
+                   imgDice1.src="./img/six.jpg"
+                }
+            }
+            
+            else{
+                if(Num == 1) {
+                   imgDice.src="./img/one.jpg"
+                   imgDice1.src="./img/five.jpg"
+                }
+                else if(Num==2) {
+                   imgDice.src="./img/two.jpg"
+                   imgDice1.src="./img/three.jpg"
+                }
+                else if(Num==3) {
+                   imgDice.src="./img/three.jpg"
+                   imgDice1.src="./img/four.jpg"
+                }
+                else if(Num==4) {
+                   imgDice.src="./img/four.jpg"
+                   imgDice1.src="./img/two.jpg"
+                }
+                else if(Num==5) {
+                   imgDice.src="./img/five.jpg"
+                   imgDice1.src="./img/six.jpg"
+                }
+                else {
+                   imgDice.src="./img/six.jpg"
+                   imgDice1.src="./img/one.jpg"
+                }
+               
+            }
+        }    
+    </script>
 </body>
 </html>
