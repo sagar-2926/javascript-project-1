@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg-light
+{
+ background-color: #e6e6e6;
+}
+.bg-dark{
+    background-color:#212529;
+}
+.btn{
+    border: none;
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    border-radius: 50%;
+}
+.contanier{
+    display: flex;
+}
+.sub-card{
+    height: 75vh;
+    width: 28rem;
+    margin: 55px auto;
+    border-radius: 10px;
+    background-color: antiquewhite;
+   padding: 5px;
+}
+.img{
+    width: 28rem;
+    border-radius: 10px 10 0 0;
+    height: 10rem;
+}
+.score{
+    margin: 20px;
+    font-size: 50px;
+}
+.btn-1{
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    
+    margin: 10px 3.8px;
+    border-radius: 10px;
+    
+}
+.btn-bg{
+  background-color: #00cc00;
+}
+.btn-bg1{
+  background-color: #0099ff;
+}
+.btn-bg2{
+  background-color: #ff3333;
+}
