@@ -40,8 +40,10 @@
     color: white;
     border: none;
     padding: 10px 50px;
-    margin: 10px 2px;
+    
+    margin: 10px 3.8px;
     border-radius: 10px;
+    
 }
 .btn-bg{
   background-color: #00cc00;

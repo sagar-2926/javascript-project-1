@@ -21,11 +21,13 @@
          <b>Live Score Keeper</b>
          <br><br><hr>
        <p class="score"><Span id="1">0</Span> To  <span id="2">0</span></p>
-    
+
+    <span></span><br><br>
  <p>Use the button below to keep the score <br> <br> 
 
      <label for="player">Score to win</label>
      <select name="player" id="player">
+        <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -34,11 +36,11 @@
         <option value="6">6</option>
      </select>
 
-<br><br><br><br>
+<br><br>
 
-     <button class="btn-1 btn-bg" onclick="">Team 1</button>
-     <button class="btn-1 btn-bg1" onclick="">Team 2</button>
-     <button class="btn-1 btn-bg2" onclick="">reset </button>
+     <button class="btn-1 btn-bg" onclick="score('tea1')" id="btn1">Team 1</button>
+     <button class="btn-1 btn-bg1" onclick="score('tea2')" id="btn2">Team 2</button>
+     <button class="btn-1 btn-bg2" onclick="reset1()">reset </button>
       </div>
    </div>
 
@@ -81,6 +83,67 @@
 
         //Score
 
+
+        let gameover=false;
+      function score(op)
+      {
+         const player1=document.getElementById('1');
+         const player2=document.getElementById('2');
+         const btn1=document.getElementById('btn1');
+         const btn2=document.getElementById('btn2');
+         const score=document.getElementById('player');
+         
+        let a=parseInt(player1.innerText);
+        let b=parseInt(player2.innerText);
+        let c=parseInt(score.value);
+       
+
+
+
+
+         if(a==c)
+         {
+           
+            alert('Team 1 Win');
+            disable(btn1,btn2);
+         }
+         
+         if(b==c)
+         {
+            
+            alert('Team 2 Win');
+            disable(btn1,btn2);
+         }
+
+         if(b==c+1 && op=='tea2'){
+           return;
+          }
+
+        if(op=='tea1' )
+        {
+            player1.innerText= ++a;
+            
+        }
+        else{
+            player2.innerText= ++b;
+        }
+
+
+      }
+
+
+     function reset1(){
+        const player1=document.getElementById('1');
+         const player2=document.getElementById('2');
+         const btn1=document.getElementById('btn1');
+         const btn2=document.getElementById('btn2');
+         const score=document.getElementById('player');
+         
+       player1.innerText='0'
+       player2.innerText='0'
+       score.value='0'
+       enable();
+     }
     </script>
 </body>
 
