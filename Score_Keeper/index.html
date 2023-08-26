@@ -99,32 +99,27 @@
        
 
 
-         
-     
 
 
          if(a==c)
          {
            
-            // if(a==c+1 && op=='tea1'){
-            // return;
-            // }
             alert('Team 1 Win');
             disable(btn1,btn2);
          }
          
          if(b==c)
          {
-        //     if(b==c+1 && op=='tea2'){
-        //    return;
-        //   }
+            
             alert('Team 2 Win');
             disable(btn1,btn2);
          }
 
-             
+         if(b==c+1 && op=='tea2'){
+           return;
+          }
 
-        if(op=='tea1')
+        if(op=='tea1' )
         {
             player1.innerText= ++a;
             
