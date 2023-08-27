@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>BMI</title>
+    <script src="https://kit.fontawesome.com/61d1b80f50.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<style>
+    .container{
+        border: 1px solid black;
+        text-align: center;
+        display: block;
+       margin-left: auto;
+       margin-right: auto;
+      margin-top: 100px;
+        padding: 20px;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px 0 rgb(0, 0, 0); 
+    }
+    .br{
+        border: 2px solid rgb(39, 33, 212);
+        height: 70px;
+    }
+       
+    
+</style>
+<body>
+  <h1 class="fw-bold text-center mt-5 text-primary">Body Mass Index</h1>
+    <div class="container">
+    Your Height : <br>
+    <input type="text" id="height"/><br><br>
+
+    Your weight : <br>
+    <input type="text" id="weight"/><br><br>
+
+    
+
+   <button type="button" class="btn btn-primary" id="height" onclick="bmiCal()">Compute BMI</button> <br><br><br>
+    <p>Your BMI</p>
+    <p class="br" id="total"> <b></b></p>
+
+</div>
+
+<script>
+    function bmiCal(){
+        const heightEmi=document.getElementById('height').value;
+        const weightEmi=document.getElementById('weight').value;
+        var height=parseFloat(heightEmi);
+        var weight=parseFloat(weightEmi);
+        console.log(height);
+        console.log(weight);
+        let Bmi= parseFloat((weight)/(height*height));
+        console.log(Bmi);
+        Bmi = Bmi.toFixed(2);
+        console.log(Bmi);
+
+        if (Bmi < 18.5) {
+            total.innerText = `you are in underwight range: ${Bmi}`;
+          } else if (Bmi >= 18.5 && Bmi > 25) {
+            total.innerText = `you are in normal range: ${Bmi}`;
+          } else if (Bmi >= 18.5 && Bmi < 25) {
+           total.innerText = `you are in not normal range: ${Bmi}`;
+          } else if (Bmi >= 25 && Bmi < 30) {
+            total.innerText =  `you are in overwieght range: ${Bmi}`;
+          } else {
+            total.innerText =  `you  are in obese: ${Bmi}`;
+          }
+        
+    }
+</script>
+</body>
+</html>

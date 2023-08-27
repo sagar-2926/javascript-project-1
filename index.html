@@ -3,11 +3,10 @@
 <head>
 
   
-    <title>Document</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/61d1b80f50.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -16,71 +15,219 @@
 .img-ludo{
     height:200px ;
 }
+.side-bar{
+    background-color: rgb(230, 228, 228);
+    height: 100vh;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    ;
+    
+   
+}
+.sb-open{
+padding:20px 40px;
+}
+.sb-close{
+ margin-left: -23%; 
+ padding:20px 40px;  
+}
+.contain{
+    flex-grow: 1;
+    height: 100vh;
+}
+.icon-sidebar{
+    text-align: end;
+}
+ .icon-social{
+    text-align: justify;
+    margin-bottom: 0;
+    position: relative;
+    bottom: -240px;
+    font-size: 20px;
+    color: white; 
+} 
+.heading-main{
+    text-align: center;
+}
+.navbar-text{
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
 </style>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body class="bg-light" id="cng">
+  
+  <!-- 3133 -->
+    <nav class="navbar bg-primary" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <p class="icon-sidebar ">
+              
+                <i class="fa-solid fa-bars fa-2xl me-5 mt-3 mb-0 ms-5 text-light"  style="cursor: pointer;" onclick="sidebarToggle()"></i>
+               </p> 
+              <div>
+               <button class="navbar-text text-primary me-3"> <i class="fa-solid fa-house"></i>  Home</button>
+              
+                 
+                <button  class="navbar-text text-primary me-3">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Project
+                   </a> 
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-primary" href="./dice-roler/index.html">Dice Roller</a></li>
+                  <li><a class="dropdown-item text-primary " href="./bulb-toggle/index.html"> Bulb Toggle</a></li>
+                  <li><a class="dropdown-item text-primary" href="./Score_Keeper/index.html">Score Keeper</a></li>
+                  <li><a class="dropdown-item text-primary" href="./product-gallary/index.html">Product Gallary</a></li>
+                  <li><a class="dropdown-item text-primary" href="./bmi-calculator/bmi-calculator.html">BMI Calculator</a></li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+                </button>
+               <!-- 00 -->
+              
+             
+              </div>
+          <form class="d-flex" role="search">
+            
+            <input class="form-control me-2 h-2" type="search" placeholder="Search Project" aria-label="Search">
+            <button class="btn btn-outline-light " type="submit">Search</button>
+            <div>
+              <button class="btn " onclick="clickme()" type="button"><img src="./dark.png" alt="" height="35px"
+                      id="img" /></button>
           </div>
+          </form>
+          
         </div>
       </nav>
+<!-- 000 -->
 
+
+
+<!-- 00000 -->
+
+    <div class="d-flex ">
+        <div class="side-bar p-5 " id="sidebar">
+           <br>
+
+           <a  href="./" class="btn btn-light w-100 text-decoration-none mt-3"> <i class="fa-solid fa-house"></i>  Home</a> <br>
+           <a  href="./dice-roler/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Dice Roller</a> <br>
+           <a  href="./bulb-toggle/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Bulb Toggle</a> <br>
+           <a  href="./Score_Keeper/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Score Keeper</a> <br> 
+           <a  href="./product-gallary/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Product Gallary</a> <br>
+
+          <p class="icon-social">
+            <i class="fa-brands fa-github fa-2xl m-2 text-primary"  style="color: #f2f4f8; cursor: pointer;"></i>
+            <i class="fa-brands fa-linkedin fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-instagram fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-facebook fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-whatsapp fa-2xl m-2 text-primary"></i>
+          </p>
+        </div>
+       
+        <div class="contain">
+          <h1 class="fw-bold heading-main mt-5" >Basic JavaScript Projects for Beginners</h1> 
+             <!-- card -->
+    <div class="d-flex justify-content-evenly flex-wrap">       
     <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
-        <img src="https://d33wubrfki0l68.cloudfront.net/599d5f385d285a2aee5342787db3217572763ed3/1a1b2/images/blog/ludo.jpg" class="card-img-top img-ludo" alt="...">
-        <div class="card-body">
-          <h3 class="card-title">Dice Roller</h3>
-          <p class="card-text">Devlop by : Mr. Abhijeet Kokat</p>
-          <a  href=" https://github.com/sagar-2926/javascript-project-1/pull/3" class="btn btn-primary text-decoration-none">source code</a>
-        </div>
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/71oCXkId4cL.png" class="card-img-top img-ludo" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Dice Roller</h3>
+              <p class="card-text">Devlop by : Mr. Abhijeet Kokat</p>
+              <a  href="https://github.com/Abhijeetkokat007/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+            </div>
+        </a>
       </div>
 
       <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxyoyqAjjn4ocsiwK-OpB04a2szCKY9NoHQ&usqp=CAU" class="card-img-top img-ludo" alt="...">
-        <div class="card-body">
-          <h3 class="card-title">Bulb Toggle</h3>
-          <p class="card-text">Devlop by : Mr.Sagar Wandile</p>
-          <a  href=" https://github.com/sagar-2926/javascript-project-1/pull/3" class="btn btn-primary text-decoration-none">source code</a>
-        </div>
-      </div>
-
-      <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
-        <img src="https://d33wubrfki0l68.cloudfront.net/599d5f385d285a2aee5342787db3217572763ed3/1a1b2/images/blog/ludo.jpg" class="card-img-top img-ludo" alt="...">
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://lh3.googleusercontent.com/nEZ3x99xT1idMZ-4QhPKZPYelOXjkc_6HpQ2kIUtTcr_3AZjVcuuBy7pCkr6prem1E0" class="card-img-top img-ludo" alt="...">
         <div class="card-body">
           <h3 class="card-title">Score Keeper</h3>
           <p class="card-text">Devlop by : Mr. Nitish Kumar</p>
-          <a  href=" https://github.com/sagar-2926/javascript-project-1/pull/3" class="btn btn-primary text-decoration-none">source code</a>
+          <a  href=" https://github.com/nitish477/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
         </div>
+        </a>
       </div>
 
+     
+    </div>
+
+    <div class="d-flex justify-content-evenly flex-wrap">
+     
+
       <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
-        <img src="data:image/jpeg;base64,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
-        
-        Tnm8+i6EIhBzRTrwe+2du7/j5/JPq8IhABShCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCD/9k=" class="card-img-top img-ludo" alt="...">
+       <a class="text-decoration-none text-dark" href=" ">
+        <img src="https://www.webfeatcomplete.com/wp-content/uploads/2017/05/MS-feature-2.png" class="card-img-top img-ludo" alt="...">
         <div class="card-body">
           <h3 class="card-title"> Product Gallary</h3>
           <p class="card-text">Devlop by : Mrs. Sonali Gadekar </p>
-          <a  href=" https://github.com/sagar-2926/javascript-project-1/pull/3" class="btn btn-primary text-decoration-none">source code</a>
+          <a  href="https://github.com/sonaligadekar20/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
         </div>
+       </a>
       </div>
+
+      <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxyoyqAjjn4ocsiwK-OpB04a2szCKY9NoHQ&usqp=CAU" class="card-img-top img-ludo" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Bulb Toggle</h3>
+              <p class="card-text">Devlop by : Mr.Sagar Wandile</p>
+              <a  href=" https://github.com/sagar-2926/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+            </div>
+        </a>
+      </div>
+
+    </div>
+    
+    
+
+    
+
+      <!-- script -->
+
+      
+
+     <script>
+
+         //theme
+         let state = false;
+        function clickme() {
+
+            const val = document.getElementById('img');
+            const cng = document.getElementById('cng');
+            if (state == false) {
+                cng.className = 'bg-dark';
+                state = true;
+                val.src = './light.png';
+
+            }
+            else {
+                cng.className = 'bg-light';
+                state = false;
+                val.src = './images/icon/dark.png'
+            }
+        }
+
+        // sidebar
+        let isSidebarOpen = true;
+
+        function sidebarToggle(){
+            isSidebarOpen = !isSidebarOpen
+            const sidebarElement=document.getElementById('sidebar');
+            const stateClassName=isSidebarOpen ? "sb-open" : "sb-close";
+            sidebarElement.className = `side-bar ${stateClassName}`;
+        }
+     </script> 
+
 </body>
+</html>
     
   
  
