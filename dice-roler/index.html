@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,18 +18,16 @@
         background-size: 100% 100%;
         height: 100%;
         width: 100%;
+       
     }
-    *{
-        margin: 0;
-        padding: 0;
-    }
+    
 .btn-dice{
-    margin:100px ;
+    margin:50px ;
     background-color: brown;
     padding: 5px;
     width: 200px;
     border-radius: 10px;
-    border: 2px solid brown;
+    border: 1px solid black;
     color: white;
     cursor: pointer;
     margin-left: auto;
@@ -51,10 +48,15 @@
     ;
     
 }
+.ani{
+    background-color: rgb(249, 248, 247);
+    padding: 20px;
+    border-radius: 10px;
+}
 .element {
-  animation: rotate 2s infinite;
-  background-color:#f9cbcb;
-  padding: 
+  animation: rotate 1.5s 0s;
+  
+
 }
 
 @keyframes rotate {
@@ -65,20 +67,27 @@
     transform: rotate(180deg)
   }
 }
-
+.img-ludo{
+    display: block;
+    height: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
 </style>
-<body class="">
+<body class="back">
     <div class="">
 
     
-    
-   <h1 class="text-center m-5"><b> Play Ludo King</b> </h1>
+ <h1 class="text-center m-5 text-light"><b> Dice Roller</b> </h1> 
+   <h3 class="text-center m-5 text-light"><b> Play Ludo King</b> </h3>
 
-    <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10"><img class="img-fluid" src="https://d33wubrfki0l68.cloudfront.net/599d5f385d285a2aee5342787db3217572763ed3/1a1b2/images/blog/ludo.jpg"/></div>
-        <div class="col-sm-1"> </div>
-      </div>
+    
+       
+   
+        <img class="img-fluid img-ludo" src="./img/ludo1.jpg"/>
+        
+      
+        
 
         <!-- grid -->
 
@@ -86,29 +95,48 @@
             <div class="row">
               <div class="col">
                     <div class="text-center">
-                    <div class="element  d-inline-block ">
-                    <img class="img-dice" id="imgdice0" src="./img/one.jpg"/>
+                    <div class=" d-inline-block ani  " id="animation0">
+                    <img class="img-dice element" id="imgdice0" src="./img/one.jpg"/>
                     </div> <span></span>
                     <button class="btn-dice " style="background-color: #244499;" onclick ="buttonDice(0)">
-                        Dice Roller
+                        Player 1
                     </button>
                     </div>
               </div>
               <div class="col">
-                <button class="btn-dice " onclick ="buttonDice()">
+                <!-- <button class="btn-dice " style="margin-top: 135px;" onclick ="buttonDice()">
                  All   Dice Roller
-                </button>
-           </div>
-              <div class="col">
-                    <div class="text-center">
-                    <div class="element  d-inline-block ">
+                </button> -->
+                <div class="text-center">
+                    <div class="  d-inline-block ani" id="animation0">
                     <img class="img-dice" id="imgdice1" src="./img/two.jpg"/>
                     </div> <span></span>
                     <button class="btn-dice "  style="background-color: #ffde01;" onclick ="buttonDice(1)">
                         Dice Roller
                     </button>
                     </div>
+           </div>
+              <div class="col">
+                    <div class="text-center">
+                    <div class="  d-inline-block ani" id="animation0">
+                    <img class="img-dice" id="imgdice2" src="./img/two.jpg"/>
+                    </div> <span></span>
+                    <button class="btn-dice "  style="background-color: #0da04b;" onclick ="buttonDice(2)">
+                        Dice Roller
+                    </button>
+                    </div>
               </div>
+
+              <div class="col">
+                <div class="text-center">
+                <div class="  d-inline-block ani" id="animation0">
+                <img class="img-dice" id="imgdice3" src="./img/two.jpg"/>
+                </div> <span></span>
+                <button class="btn-dice "  style="background-color: #ec2025;" onclick ="buttonDice(3)">
+                    Dice Roller
+                </button>
+                </div>
+          </div>
               
             </div>
           </div>
@@ -122,6 +150,11 @@
            console.log(Num);
            const imgDice = document.getElementById('imgdice0');
            const imgDice1 = document.getElementById('imgdice1');
+           const imgDice2 = document.getElementById('imgdice2');
+           const imgDice3 = document.getElementById('imgdice3');
+           const animationByround=document.getElementById(`animation${num}`);
+        //    animationByround.classList.add("element");
+           
             console.log(imgDice);
             if (num==0){
                 if(Num == 1) {
@@ -143,6 +176,7 @@
                    imgDice.src="./img/six.jpg"
                 }
             }
+            
             else if(num==1){
                 if(Num == 1) {
                    imgDice1.src="./img/one.jpg"
@@ -161,6 +195,48 @@
                 }
                 else {
                    imgDice1.src="./img/six.jpg"
+                }
+            }
+
+            else if(num==2){
+                if(Num == 1) {
+                   imgDice2.src="./img/one.jpg"
+                }
+                else if(Num==2) {
+                   imgDice2.src="./img/two.jpg"
+                }
+                else if(Num==3) {
+                   imgDice2.src="./img/three.jpg"
+                }
+                else if(Num==4) {
+                   imgDice2.src="./img/four.jpg"
+                }
+                else if(Num==5) {
+                   imgDice2.src="./img/five.jpg"
+                }
+                else {
+                   imgDice2.src="./img/six.jpg"
+                }
+            }
+
+            else if(num==3){
+                if(Num == 1) {
+                   imgDice3.src="./img/one.jpg"
+                }
+                else if(Num==2) {
+                   imgDice3.src="./img/two.jpg"
+                }
+                else if(Num==3) {
+                   imgDice3.src="./img/three.jpg"
+                }
+                else if(Num==4) {
+                   imgDice3.src="./img/four.jpg"
+                }
+                else if(Num==5) {
+                   imgDice3.src="./img/five.jpg"
+                }
+                else {
+                   imgDice3.src="./img/six.jpg"
                 }
             }
             
@@ -195,4 +271,4 @@
     </script>
 </body>
 </html>
->>>>>>> 670e18d318648bf7e72c322f65e194c4cbd8a6d8
+

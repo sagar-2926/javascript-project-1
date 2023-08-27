@@ -3,43 +3,236 @@
 <head>
 
   
-    <title>Document</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/61d1b80f50.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
 </head>
 <style>
-    .side{
-        background-color: rgb(95, 93, 93);
-        height: 100vh;
-
-    }
-    .
+.img-ludo{
+    height:200px ;
+}
+.side-bar{
+    background-color: rgb(230, 228, 228);
+    height: 100vh;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    ;
+    
+   
+}
+.sb-open{
+padding:20px 40px;
+}
+.sb-close{
+ margin-left: -23%; 
+ padding:20px 40px;  
+}
+.contain{
+    flex-grow: 1;
+    height: 100vh;
+}
+.icon-sidebar{
+    text-align: end;
+}
+ .icon-social{
+    text-align: justify;
+    margin-bottom: 0;
+    position: relative;
+    bottom: -240px;
+    font-size: 20px;
+    color: white; 
+} 
+.heading-main{
+    text-align: center;
+}
+.navbar-text{
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
 </style>
-<body>
-
-    <div>
-      <div class="side">
-      
-      </div>
-      <div>
-      
-      </div>
-    </div>
- 
-    <div class="card" style="width: 18rem;">
-        <img  src="https://d33wubrfki0l68.cloudfront.net/599d5f385d285a2aee5342787db3217572763ed3/1a1b2/images/blog/ludo.jpg" class="card-img-top img-ludo" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<body class="bg-light" id="cng">
+  
+  <!-- 3133 -->
+    <nav class="navbar bg-primary" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <p class="icon-sidebar ">
+              
+                <i class="fa-solid fa-bars fa-2xl me-5 mt-3 mb-0 ms-5 text-light"  style="cursor: pointer;" onclick="sidebarToggle()"></i>
+               </p> 
+              <div>
+               <button class="navbar-text text-primary me-3"> <i class="fa-solid fa-house"></i>  Home</button>
+              
+                 
+                <button  class="navbar-text text-primary me-3">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Project
+                   </a> 
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-primary" href="./dice-roler/index.html">Dice Roller</a></li>
+                  <li><a class="dropdown-item text-primary " href="./bulb-toggle/index.html"> Bulb Toggle</a></li>
+                  <li><a class="dropdown-item text-primary" href="./Score_Keeper/index.html">Score Keeper</a></li>
+                  <li><a class="dropdown-item text-primary" href="./product-gallary/index.html">Product Gallary</a></li>
+                  <li><a class="dropdown-item text-primary" href="./bmi-calculator/bmi-calculator.html">BMI Calculator</a></li>
+                </ul>
+              </li>
+                </button>
+               <!-- 00 -->
+              
+             
+              </div>
+          <form class="d-flex" role="search">
+            
+            <input class="form-control me-2 h-2" type="search" placeholder="Search Project" aria-label="Search">
+            <button class="btn btn-outline-light " type="submit">Search</button>
+            <div>
+              <button class="btn " onclick="clickme()" type="button"><img src="./dark.png" alt="" height="35px"
+                      id="img" /></button>
+          </div>
+          </form>
+          
         </div>
+      </nav>
+<!-- 000 -->
+
+
+
+<!-- 00000 -->
+
+    <div class="d-flex ">
+        <div class="side-bar p-5 " id="sidebar">
+           <br>
+
+           <a  href="./" class="btn btn-light w-100 text-decoration-none mt-3"> <i class="fa-solid fa-house"></i>  Home</a> <br>
+           <a  href="./dice-roler/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Dice Roller</a> <br>
+           <a  href="./bulb-toggle/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Bulb Toggle</a> <br>
+           <a  href="./Score_Keeper/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Score Keeper</a> <br> 
+           <a  href="./product-gallary/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Product Gallary</a> <br>
+
+          <p class="icon-social">
+            <i class="fa-brands fa-github fa-2xl m-2 text-primary"  style="color: #f2f4f8; cursor: pointer;"></i>
+            <i class="fa-brands fa-linkedin fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-instagram fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-facebook fa-2xl m-2 text-primary"></i>
+            <i class="fa-brands fa-whatsapp fa-2xl m-2 text-primary"></i>
+          </p>
+        </div>
+       
+        <div class="contain">
+          <h1 class="fw-bold heading-main mt-5" >Basic JavaScript Projects for Beginners</h1> 
+             <!-- card -->
+    <div class="d-flex justify-content-evenly flex-wrap">       
+    <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/71oCXkId4cL.png" class="card-img-top img-ludo" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Dice Roller</h3>
+              <p class="card-text">Devlop by : Mr. Abhijeet Kokat</p>
+              <a  href="https://github.com/Abhijeetkokat007/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+            </div>
+        </a>
       </div>
+
+      <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://lh3.googleusercontent.com/nEZ3x99xT1idMZ-4QhPKZPYelOXjkc_6HpQ2kIUtTcr_3AZjVcuuBy7pCkr6prem1E0" class="card-img-top img-ludo" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Score Keeper</h3>
+          <p class="card-text">Devlop by : Mr. Nitish Kumar</p>
+          <a  href=" https://github.com/nitish477/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
+        </div>
+        </a>
+      </div>
+
+     
+    </div>
+
+    <div class="d-flex justify-content-evenly flex-wrap">
+     
+
+      <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
+       <a class="text-decoration-none text-dark" href=" ">
+        <img src="https://www.webfeatcomplete.com/wp-content/uploads/2017/05/MS-feature-2.png" class="card-img-top img-ludo" alt="...">
+        <div class="card-body">
+          <h3 class="card-title"> Product Gallary</h3>
+          <p class="card-text">Devlop by : Mrs. Sonali Gadekar </p>
+          <a  href="https://github.com/sonaligadekar20/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
+        </div>
+       </a>
+      </div>
+
+      <div class="card m-5 " style ="width: 20rem; box-shadow: 0 5px 40px 0 rgb(89, 88, 88); padding: 20px; border-radius: 10px;">
+        <a class="text-decoration-none text-dark " href=" ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxyoyqAjjn4ocsiwK-OpB04a2szCKY9NoHQ&usqp=CAU" class="card-img-top img-ludo" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Bulb Toggle</h3>
+              <p class="card-text">Devlop by : Mr.Sagar Wandile</p>
+              <a  href=" https://github.com/sagar-2926/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
+              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+            </div>
+        </a>
+      </div>
+
+    </div>
+    
+    
+
+    
+
+      <!-- script -->
+
+      
+
+     <script>
+
+         //theme
+         let state = false;
+        function clickme() {
+
+            const val = document.getElementById('img');
+            const cng = document.getElementById('cng');
+            if (state == false) {
+                cng.className = 'bg-dark';
+                state = true;
+                val.src = './light.png';
+
+            }
+            else {
+                cng.className = 'bg-light';
+                state = false;
+                val.src = './images/icon/dark.png'
+            }
+        }
+
+        // sidebar
+        let isSidebarOpen = true;
+
+        function sidebarToggle(){
+            isSidebarOpen = !isSidebarOpen
+            const sidebarElement=document.getElementById('sidebar');
+            const stateClassName=isSidebarOpen ? "sb-open" : "sb-close";
+            sidebarElement.className = `side-bar ${stateClassName}`;
+        }
+     </script> 
+
+</body>
+</html>
+    
+  
+ 
+    
 
 
   
 
-</body>
-</html>
