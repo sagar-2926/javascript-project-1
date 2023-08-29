@@ -19,7 +19,7 @@
     background-color: rgb(230, 228, 228);
     height: 100vh;
     width: 25%;
-    position: sticky;
+    margin-left: -22%; 
     top: 0;
     ;
     
@@ -27,9 +27,12 @@
 }
 .sb-open{
 padding:20px 40px;
+width: 25%;
+
+
 }
 .sb-close{
- margin-left: -23%; 
+ margin-left: 0%; 
  padding:20px 40px;  
 }
 .contain{
@@ -38,6 +41,9 @@ padding:20px 40px;
 }
 .icon-sidebar{
     text-align: end;
+    margin-left: -35px;
+    margin-top: 10px;
+   
 }
  .icon-social{
     text-align: justify;
@@ -52,63 +58,78 @@ padding:20px 40px;
 }
 .navbar-text{
     color: #0d6efd;
-    border-bottom: 2px solid #0d6efd;
+    border: 2px solid #0d6efd;
     background-color: white;
     border-radius: 10px;
     padding: 5px 20px;
 }
+.back-white{
+  background-color: white;
+  color:#0d6efd ;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.height{
+  height: 40px;
+}
+
 </style>
 <body class="bg-light" id="cng">
   
   <!-- 3133 -->
-    <nav class="navbar bg-primary" style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-            <p class="icon-sidebar ">
-              
-                <i class="fa-solid fa-bars fa-2xl me-5 mt-3 mb-0 ms-5 text-light"  style="cursor: pointer;" onclick="sidebarToggle()"></i>
-               </p> 
-              <div>
-               <button class="navbar-text text-primary me-3"> <i class="fa-solid fa-house"></i>  Home</button>
-              
-                 
-                <button  class="navbar-text text-primary me-3">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Project
-                   </a> 
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-primary" href="./dice-roler/index.html">Dice Roller</a></li>
-                  <li><a class="dropdown-item text-primary " href="./bulb-toggle/index.html"> Bulb Toggle</a></li>
-                  <li><a class="dropdown-item text-primary" href="./Score_Keeper/index.html">Score Keeper</a></li>
-                  <li><a class="dropdown-item text-primary" href="./product-gallary/index.html">Product Gallary</a></li>
-                  <li><a class="dropdown-item text-primary" href="./bmi-calculator/bmi-calculator.html">BMI Calculator</a></li>
-                </ul>
-              </li>
-                </button>
-               <!-- 00 -->
-              
-             
-              </div>
-          <form class="d-flex" role="search">
-            
-            <input class="form-control me-2 h-2" type="search" placeholder="Search Project" aria-label="Search">
-            <button class="btn btn-outline-light " type="submit">Search</button>
-            <div>
-              <button class="btn " onclick="clickme()" type="button"><img src="./dark.png" alt="" height="35px"
-                      id="img" /></button>
-          </div>
-          </form>
-          
-        </div>
-      </nav>
+    
 <!-- 000 -->
-
+<nav class="navbar navbar-expand-lg bg-primary text-light">
+  <div class="container-fluid text-light">
+    <a class="navbar-brand text-light border-b" href="#"><span class="fs-2"><b>JS </b> </span> Project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active back-white ps-4 pe-4 text-primary  fw-bold" aria-current="page" href="./index.html"> <i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ps-5 pe-5  back-white fw-bold" href="https://basic-javascript-projects.netlify.app/">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle back-white fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu text-primary">
+            <li><a class="dropdown-item text-primary" href="./dice-roler/index.html">Dice Roller</a></li>
+            <li><a class="dropdown-item text-primary " href="./bulb-toggle/index.html"> Bulb Toggle</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-primary" href="./Score_Keeper/index.html">Score Keeper</a>
+            <li><a class="dropdown-item text-primary" href="./product-gallary/index.html">Product Gallary</a></li>
+            <li><a class="dropdown-item text-primary" href="./bmi-calculator/bmi-calculator.html">BMI Calculator</a></li>
+            <li><a class="dropdown-item" href="#"> </a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          
+        </li>
+      </ul>
+      <form class="d-flex " role="search">
+        <input class="form-control me-2 height" type="search" placeholder="Search Project" aria-label="Search">
+        <button class="btn btn-outline-light height " type="submit">Search </button>
+      </form>
+      <div>
+        <button class="btn " onclick="clickme()" type="button"><img src="./dark.png" alt="" height="35px"
+                id="img" /></button>
+    </div>
+    </div>
+  </div>
+</nav>
 
 
 <!-- 00000 -->
 
     <div class="d-flex ">
         <div class="side-bar p-5 " id="sidebar">
+         
            <br>
 
            <a  href="./" class="btn btn-light w-100 text-decoration-none mt-3"> <i class="fa-solid fa-house"></i>  Home</a> <br>
@@ -117,15 +138,18 @@ padding:20px 40px;
            <a  href="./Score_Keeper/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Score Keeper</a> <br> 
            <a  href="./product-gallary/index.html" class="btn btn-primary w-100 text-decoration-none mt-3">Product Gallary</a> <br>
 
-          <p class="icon-social">
-            <i class="fa-brands fa-github fa-2xl m-2 text-primary"  style="color: #f2f4f8; cursor: pointer;"></i>
-            <i class="fa-brands fa-linkedin fa-2xl m-2 text-primary"></i>
-            <i class="fa-brands fa-instagram fa-2xl m-2 text-primary"></i>
-            <i class="fa-brands fa-facebook fa-2xl m-2 text-primary"></i>
-            <i class="fa-brands fa-whatsapp fa-2xl m-2 text-primary"></i>
-          </p>
+          <div class="icon-social d-flex justify-content-evenly align-items-center flex-wrap">
+            <i class="fa-brands fa-github fa-2xl  mt-5 text-primary"  style="color: #f2f4f8; cursor: pointer;"></i>
+            <i class="fa-brands fa-linkedin fa-2xl  mt-5 text-primary"></i>
+            <i class="fa-brands fa-instagram fa-2xl  mt-5 text-primary"></i>
+            <i class="fa-brands fa-facebook fa-2xl  mt-5 text-primary"></i>
+            <i class="fa-brands fa-whatsapp fa-2xl  mt-5 text-primary"></i>
+          </div>
         </div>
-       
+        <p class="icon-sidebar ">
+              
+          <i class="fa-solid fa-bars fa-2xl  mt-3 mb-0  text-dark"  style="cursor: pointer;" onclick="sidebarToggle()"></i>
+         </p>
         <div class="contain">
           <h1 class="fw-bold heading-main mt-5" >Basic JavaScript Projects for Beginners</h1> 
              <!-- card -->
@@ -135,9 +159,9 @@ padding:20px 40px;
             <img src="https://images-eu.ssl-images-amazon.com/images/I/71oCXkId4cL.png" class="card-img-top img-ludo" alt="...">
             <div class="card-body">
               <h3 class="card-title">Dice Roller</h3>
-              <p class="card-text">Devlop by : Mr. Abhijeet Kokat</p>
+              <p class="card-text">Devloped by : Mr. Abhijeet Kokat</p>
               <a  href="https://github.com/Abhijeetkokat007/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
-              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+              <a  href="https://basic-javascript-projects.netlify.app/ " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
             </div>
         </a>
       </div>
@@ -147,9 +171,9 @@ padding:20px 40px;
             <img src="https://lh3.googleusercontent.com/nEZ3x99xT1idMZ-4QhPKZPYelOXjkc_6HpQ2kIUtTcr_3AZjVcuuBy7pCkr6prem1E0" class="card-img-top img-ludo" alt="...">
         <div class="card-body">
           <h3 class="card-title">Score Keeper</h3>
-          <p class="card-text">Devlop by : Mr. Nitish Kumar</p>
+          <p class="card-text">Devloped by : Mr. Nitish Kumar</p>
           <a  href=" https://github.com/nitish477/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
-          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
+          <a  href=" https://basic-javascript-projects.netlify.app/" class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
         </div>
         </a>
       </div>
@@ -165,9 +189,9 @@ padding:20px 40px;
         <img src="https://www.webfeatcomplete.com/wp-content/uploads/2017/05/MS-feature-2.png" class="card-img-top img-ludo" alt="...">
         <div class="card-body">
           <h3 class="card-title"> Product Gallary</h3>
-          <p class="card-text">Devlop by : Mrs. Sonali Gadekar </p>
+          <p class="card-text">Devloped by : Mrs. Sonali Gadekar </p>
           <a  href="https://github.com/sonaligadekar20/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
-          <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
+          <a  href="https://basic-javascript-projects.netlify.app/ " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     demo   </a>
         </div>
        </a>
       </div>
@@ -177,9 +201,9 @@ padding:20px 40px;
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxyoyqAjjn4ocsiwK-OpB04a2szCKY9NoHQ&usqp=CAU" class="card-img-top img-ludo" alt="...">
             <div class="card-body">
               <h3 class="card-title">Bulb Toggle</h3>
-              <p class="card-text">Devlop by : Mr.Sagar Wandile</p>
+              <p class="card-text">Devloped by : Mr.Sagar Wandile</p>
               <a  href=" https://github.com/sagar-2926/javascript-project-1" class="btn btn-primary text-decoration-none mt-3">source code</a>
-              <a  href=" " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
+              <a  href="https://basic-javascript-projects.netlify.app/ " class="btn btn-primary text-decoration-none mt-3 ps-4 pe-4">     Demo   </a>
             </div>
         </a>
       </div>
